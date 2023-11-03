@@ -1,0 +1,67 @@
+#Aliases here
+alias lg="lazygit"
+alias q="exit"
+alias nrs="npm run start"
+alias c="clear"
+alias w="cd ~/vimwiki && n"
+alias sql="nvim ~/code/aep_cs_scripts"
+alias post="cd ~/code/postman && nvim ."
+alias n="nvim '+Telescope find_files'"
+
+# local kipsu
+alias loc="cd ~/code/kipsu"
+alias nloc="cd ~/code/kipsu && nvim ."
+alias phps="open -na "PhpStorm.app" --args "$@""
+alias pbc="php bin/console"
+alias feb="npm install && npm run build:widgets && npm run build:dev"
+alias nb="docker exec -it kippy-core ./composer.phar install && cd ~/code/kipsu/assets/ && fnm use v16.17 && npm install && npm run build:widgets && npm run build:dev"
+
+# docker
+alias do="open -n ~/Applications/Docker.app"
+alias d="Docker"
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+alias sloc="docker stop kippy-core kippy-redis kippy-mysql"
+alias dloc="docker rmi kipsu-kippy kipsu-kippy-ui-builder redis:alpine && docker volume rm kipsu_kippy-ui-mount"
+alias dcls="docker container ls -a"
+alias dils="docker image ls -a"
+alias dvls="docker volume ls -a"
+alias bw="npm run build:widgets"
+alias pu="docker exec -it kippy-core vendor/bin/phpunit"
+alias ci="docker exec -it kippy-core ./composer.phar install"
+alias dm="docker compose exec kippy ./vendor/bin/doctrine-migrations migrations:migrate"
+alias ld="DOCKER_HOST=unix:///$HOME/.docker/run/docker.sock lazydocker"
+
+# tmux
+alias ta="tmux attach -t"
+alias tn="tmux new -s"
+alias td="tmux detach"
+alias tls='tmux ls'
+alias tk='tmux kill-session -t'
+
+#config
+alias dot="cd ~/dotfiles/config && n"
+alias na="nvim ~/dotfiles/config/aliases"
+alias vzsh="nvim ~/.zshrc"
+
+# Filesystem aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# reload zsh config
+alias reload='RELOAD=1 source ~/.zshrc'
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Side projects
+alias ivan="nvim ~/ivan/ivan_website"
+alias westman="nvim ~/sideProjects/westman"
+
+# Ranger
+alias r="ranger"
+alias rr="ranger ~"
+
